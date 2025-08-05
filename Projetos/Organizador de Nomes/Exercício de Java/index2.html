@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Nomes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="card">
+            <h1>Analisador de Nomes</h1>
+            <div id="Resultado"></div>
+            <button onclick="location.reload()">Reiniciar</button>
+
+            <script>
+                const nome = prompt(`Digite seu nome completo: `)
+                const resultado = document.getElementById(`Resultado`)
+
+                resultado.innerHTML += `<p class="resultado"><strong>Seu nome é:</strong> ${nome}</p>`;
+                resultado.innerHTML += `<p><strong>Total de caracteres: </strong> ${nome.length} letras</p>`;
+                resultado.innerHTML += `<p><strong>Primeira letra: </strong> ${nome[0]}</p>`;
+                resultado.innerHTML += `<p><strong>Última letra: </strong>  ${nome.slice(-1)}</p>`;
+                resultado.innerHTML += `<p><strong>Índice da primeira letra "a": </strong> ${nome.indexOf("a")}</p>`;
+                resultado.innerHTML += `<p><strong>Índice da última letra "a": </strong> ${nome.lastIndexOf("a")}</p>`
+                resultado.innerHTML += `<p><strong>Últimas 3 letras: </strong> ${nome.slice(-3)}</p>`;
+                resultado.innerHTML += `<p><strong>Maiúsculas : </strong> ${nome.toUpperCase()}</p>`;
+                resultado.innerHTML += `<p><strong>Minúsculas: </strong> ${nome.toLowerCase()}</p>`;
+                resultado.innerHTML += `<p><strong>Palavras do nome: </strong> ${nome.split(" ")}</p>`;
+
+            </script>
+    </section>
+
+</body>
+
+</html>
+
+</div>
+</body>
+
+</html>
