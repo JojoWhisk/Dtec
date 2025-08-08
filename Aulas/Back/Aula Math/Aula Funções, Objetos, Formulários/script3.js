@@ -4,7 +4,7 @@ const resultado = document.querySelector(".resultado")
 
 const pessoas = []
 
-form.addEventListener('submit', function(evento){
+form.addEventListener('submit', function (evento) {
     evento.preventDefault();
 
     const nome = form.querySelector(".nome").value;
@@ -27,6 +27,6 @@ form.addEventListener('submit', function(evento){
     resultado.innerHTML += `<p>${nome}  ${sobrenome} - ${peso}kg, ${altura}</p>`
 
 
-
-} )
+    form.reset()
+})
 
