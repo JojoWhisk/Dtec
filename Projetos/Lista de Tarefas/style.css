@@ -1,0 +1,39 @@
+*{
+    background-color: whitesmoke;
+}
+
+.container{
+   max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+h1{
+    font-family: Arial;
+    background-color: white;
+}
+
+div{
+    background-color: white;
+}
+
+input{
+    border:  solid black;
+    width: 60%;
+    height: 25px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+button{
+    border: solid black;
+    width: 30%;
+    height: 31px;
+    border-radius: 3px;
+    background-color: rgb(64, 64, 252);
+    color: white
+}
