@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latitude e Longitude</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+       
+
+        /* alteração em css nicolas/castiel */
+        input[type="text"] {
+            padding: 8px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid black;
+
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: rgb(55, 70, 230); /*colocou cor Wesley Evelly*/
+            border-radius: 5px;
+            color: #cccccc;
+            border: 1px solid rgb(0, 0, 0);
+        }
+        /*termina aqui*/
+
+
+        #container {
+            margin-top: 20px;
+            border: 1px solid #cccccc;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Informações de Países</h1>
+    <p>Digite o nome de um país para buscar.</p>
+                                                            
+    <input type="text" id="paisInput" placeholder="Ex: São paulo, Rio de janeiro, Bahia">
+    <button id="buscarBtn">Buscar</button>
+
+    <div id="container">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
