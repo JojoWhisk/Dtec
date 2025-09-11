@@ -10,11 +10,12 @@ app.use(express.json())
 //Porta onde a API vai rodar
 const PORT = 3001;
 
-const usuarios = [
+let usuarios = [
     {id: 1, nome: "Ana", idade: 25},
     {id: 2, nome: "Carlos", idade: 30},
     {id: 3, nome: "Maria", idade: 22},
-    {id: 4, nome: "João Carlos", idade: 42}
+    {id: 4, nome: "João Carlos", idade: 42},
+    {id:10, nome: "Gael", idade: 25}
 ]
 
 app.get('/',(req,res) => {
@@ -36,7 +37,7 @@ app.get('/usuarios/:id', (req, res) => {
     }
 })
 
-app.get('/usuarios/buscar/:nome', (req,res) => {
+app.get('/usuarios/nome/:nome', (req,res) => {
     const buscaNome = req.params.nome.toLowerCase()
     const resultados = usuarios.filter(u => u.nome.toLowerCase().includes(buscaNome))
 
@@ -45,6 +46,53 @@ app.get('/usuarios/buscar/:nome', (req,res) => {
     }else{
         res.status(404).json({mensagem: 'Usuário não encontrado'})
     }
+})
+
+app.delete('/usuarios/:id', (req,res) => {
+    const id = req.params.id
+    usuarios = usuarios.filter(u => u.id != id)
+    res.json({mensagem: "Usuário Removido com sucesso"})
+})
+
+app.post('/usuarios', (req,res) => {
+    const novoUsuario = {
+        id: usuarios.length + 1,
+        nome: req.body.nome,
+        idade: req.body.idade
+    };
+    usuarios.push(novoUsuario)
+    res.status(201).json(novoUsuario)
+
+})
+
+app.put('/usuarios/:id', (req,res) => {
+    const id = req.params.id;
+    const nome = req.body.nome
+    const idade = req.body.idade
+
+    const usuario = usuarios.find(u => u.id == id)
+
+    if (!usuario){
+        return res.status(404).json({mensagem: "Usuário não encontrado"})
+}
+
+usuario.nome = nome || usuario.nome
+usuario.idade = idade || usuario.idade 
+res.json(usuario)
+
+})
+
+app.get('/usuarios/idade/:idade', (req,res) => {
+    const buscarIdade = req.params.idade
+    const resultado = usuarios.filter(u => u.idade == buscarIdade)
+
+    if(resultado. length > 0){
+        res.json(resultado)
+    }else{
+        res.status(404).json({mensagem: "Usuário não encontrado"})
+    }
+
+
 })
 
 
