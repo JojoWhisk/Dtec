@@ -91,8 +91,6 @@ app.get('/usuarios/idade/:idade', (req,res) => {
     }else{
         res.status(404).json({mensagem: "Usuário não encontrado"})
     }
-
-
 })
 
 
