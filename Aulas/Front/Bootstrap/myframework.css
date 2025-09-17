@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    display: flex; /* Usa flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaço entre o logo e a lista */
+    align-items: center; /* Alinha verticalmente */
+    background-color: #333; /* Cor de fundo escura */
+    padding: 10px 20px;
+    color: white;
+}
+
+/* Estilos para o logo */
+.navbar .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para a lista não ordenada */
+.navbar ul {
+    list-style-type: none; /* Remove as bolinhas da lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa flexbox para alinhar os itens da lista */
+}
+
+/* Estilos para cada item da lista */
+.navbar li {
+    margin-left: 20px;
+}
+
+/* Estilos para os links dentro da lista */
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para quando o mouse passa sobre o link */
+.navbar li a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+.carousel{
+    width: 100%;
+    height: auto;
+    
+}
