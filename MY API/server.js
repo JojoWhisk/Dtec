@@ -1,11 +1,13 @@
 //Importar o express 
 const express = require("express")
+const cors = require('cors')
 
 // Criando minha aplicação
 const app = express()
 
 //Permitir trabalhar com json
 app.use(express.json())
+app.use(cors())
 
 //Porta onde a API vai rodar
 const PORT = 3001;
